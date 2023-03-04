@@ -1,6 +1,6 @@
 # Puppet module springboot
 
-#### Table of Contents
+## Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
@@ -10,9 +10,9 @@
     * [Beginning with springboot](#beginning-with-springboot)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
-7. [Disclaimer](#disclaimer)
+6. [Limitations - OS compatibility, etc.](#limitations)
+7. [Development - Guide for contributing to the module](#development)
+8. [Disclaimer](#disclaimer)
 
 ## Overview
 
@@ -81,7 +81,7 @@ and filesystems, using the LVM groups supplied:
 * `lv_tmp_springboot`,
 * `lv_log_springboot`.
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
 This module requires the following Puppet modules to be available:
     - puppetlabs-stdlib, version 1.0.0 or later,
