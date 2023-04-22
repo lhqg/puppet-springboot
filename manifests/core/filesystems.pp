@@ -64,7 +64,7 @@ class springboot::core::filesystems (
 
   unless $opt_vg =~ Undef {
     mountpoint { '/opt/springboot': }
-    logical_volume { 'lv_opt_springbot':
+    logical_volume { 'lv_opt_springboot':
       initial_size => '256M',
       volume_group => $opt_vg,
     }
