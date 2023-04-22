@@ -59,6 +59,11 @@ define springboot::app::deploy (
     protocol => 'tcp',
   }
 
+  Selinux::Port {
+    ensure   => present,
+    protocol => 'tcp',
+  }
+
   if $deployment_user =~ Undef {
     $final_deployment_user = 'springboot'
   } else {
