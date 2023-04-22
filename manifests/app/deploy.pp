@@ -2,6 +2,8 @@
 # === Parameters
 # [*listen_port*]
 #   TCP port the Springboot app listens on
+# [*monitoring_port*]
+#   TCP port the Springboot app listens on for monitoring purpose
 # [*deployment_user*]
 #   OS user that deploys the JAR artifcats and its configuration files
 #
@@ -15,9 +17,10 @@
 # [*app_name*]
 #   Name of the Springboot application
 define springboot::app::deploy (
-  Stdlib::Port                  $listen_port,
-
   Boolean                       $restart_app_upon_jar_change,
+
+  Stdlib::Port                  $listen_port,
+  Optional[Stdlib::Port]        $monitoring_port      = undef,
 
   Optional[Stdlib::Filesource]  $jar_distribution_uri = undef,
   String                        $jar_name             = "${name}.jar",
@@ -48,6 +51,11 @@ define springboot::app::deploy (
     force   => false,
     backup  => false,
     notify  => Exec["Restore SELinux context for springboot ${title}"],
+  }
+
+  Selinux::Port {
+    ensure   => present,
+    protocol => 'tcp',
   }
 
   if $deployment_user =~ Undef {
@@ -119,10 +127,15 @@ define springboot::app::deploy (
   }
 
   selinux::port { "Springboot_${listen_port}":
-    ensure   => present,
-    seltype  => 'springboot_port_t',
-    protocol => 'tcp',
-    port     => $listen_port,
+    seltype => 'springboot_port_t',
+    port    => $listen_port,
+  }
+
+  unless $monitoring_port =~ Undef {
+    selinux::port { "Springboot_${monitoring_port}":
+      seltype => 'springboot_monitoring_port_t',
+      port    => $monitoring_port,
+    }
   }
 
   unless $jar_distribution_uri =~ Undef {

@@ -2,6 +2,8 @@
 # === Parameters
 # [*listen_port*]
 #   TCP port the Springboot app listens on
+# [*monitoring_port*]
+#   TCP port the Springboot app listens on for monitoring purpose
 # [*deployment_user*]
 #   OS user that deploys the JAR artifcats and its configuration files
 # [*java_version*]
@@ -59,6 +61,7 @@
 #
 define springboot::app (
   Stdlib::Port                  $listen_port,
+  Optional[Stdlib::Port]        $monitoring_port                  = undef,
 
   Oprional[Stdlib::Filesource]  $jar_distribution_uri             = undef,
   String                        $jar_name                         = "${name}.jar",
@@ -153,6 +156,7 @@ define springboot::app (
   springboot::app::deploy { $svc_app_name:
     deployment_user             => $deployment_user,
     listen_port                 => $listen_port,
+    monitoring_port             => $monitoring_port,
     jar_distribution_uri        => $jar_distribution_uri,
     jar_name                    => $jar_name,
     restart_app_upon_jar_change => $restart_app_upon_jar_change,

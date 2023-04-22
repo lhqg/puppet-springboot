@@ -1,6 +1,6 @@
 {
   "name": "hubertqc-springboot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Hubert Quarantel-Colombani <hubert@quarantel.name>",
   "summary": "Creates core Linux resources for Springboot application - deploy App",
   "license": "GPL-2.0",
