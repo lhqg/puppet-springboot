@@ -162,8 +162,8 @@ define springboot::app (
     restart_app_upon_jar_change => $restart_app_upon_jar_change,
   }
 
-  exec { "Restore SELinux context for springboot ${svc_app_name}":
-    command => "restorecon -RFi /{srv,opt}/springboot/${svc_app_name} /var/{log,lib,run,tmp}/springboot/${svc_app_name}",
+  exec { "Restore SELinux fcontexts for Springboot application ${svc_app_name}":
+    command => "restorecon -RFi /{srv,opt}/springboot/${svc_app_name} /var/{log,lib,tmp}/springboot/${svc_app_name}",
   }
 
   exec { "Springboot ${svc_app_name} refresh systemd":

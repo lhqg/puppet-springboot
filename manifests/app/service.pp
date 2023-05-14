@@ -65,9 +65,10 @@ define springboot::app::service (
   #
 
   File {
-    seluser => 'system_u',
-    selrole => 'object_r',
-    notify  => Exec["Restore SELinux context for springboot application ${title}"],
+    seluser  => 'system_u',
+    selrole  => 'object_r',
+    selrange => 's0',
+    notify   => Exec["Restore SELinux fcontexts for Springboot application ${title}"],
   }
 
   #

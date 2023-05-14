@@ -40,17 +40,18 @@ define springboot::app::deploy (
   #
 
   File {
-    ensure  => directory,
-    owner   => 'springboot',
-    group   => 'springboot',
-    mode    => '2750',
-    seluser => 'system_u',
-    selrole => 'object_r',
-    purge   => false,
-    recurse => false,
-    force   => false,
-    backup  => false,
-    notify  => Exec["Restore SELinux context for springboot ${title}"],
+    ensure   => directory,
+    owner    => 'springboot',
+    group    => 'springboot',
+    mode     => '2750',
+    seluser  => 'system_u',
+    selrole  => 'object_r',
+    selrange => 's0',
+    purge    => false,
+    recurse  => false,
+    force    => false,
+    backup   => false,
+    notify   => Exec["Restore SELinux fcontexts for Springboot ${title}"],
   }
 
   Selinux::Port {
