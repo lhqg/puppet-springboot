@@ -163,7 +163,12 @@ define springboot::app (
   }
 
   exec { "Restore SELinux fcontexts for Springboot application ${svc_app_name}":
-    command => "restorecon -RFi /{srv,opt}/springboot/${svc_app_name} /var/{log,lib,tmp}/springboot/${svc_app_name}",
+    command => [
+      'restorecon -RFi',
+      "/{srv,opt}/springboot/${svc_app_name}",
+      "/var/{log,lib,tmp}/springboot/${svc_app_name}",
+      "/etc/systemd/system/springboot@${svc_app_name}.service.d",
+    ],
   }
 
   exec { "Springboot ${svc_app_name} refresh systemd":
