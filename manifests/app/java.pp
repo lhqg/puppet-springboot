@@ -19,11 +19,12 @@ define springboot::app::java (
   #
 
   File {
-    owner   => 'root',
-    group   => 'springboot',
-    seluser => 'system_u',
-    selrole => 'object_r',
-    require => File["/opt/springboot/${app_name}"],
+    owner    => 'root',
+    group    => 'springboot',
+    seluser  => 'system_u',
+    selrole  => 'object_r',
+    selrange => 's0',
+    require  => File["/opt/springboot/${app_name}"],
   }
 
   #
