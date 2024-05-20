@@ -1,3 +1,11 @@
+![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/hubertqc/puppet-springboot)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![GitHub Issues](https://img.shields.io/github/issues/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/issues)
+[![GitHub PR](https://img.shields.io/github/issues-pr/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/pulls)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/commits/main)
+[![GitHub Last commit](https://img.shields.io/github/last-commit/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/commits/main)
+![GitHub Downloads](https://img.shields.io/github/downloads/hubertqc/puppet-springboot/total)
+
 # Puppet module springboot
 
 ## Table of Contents
