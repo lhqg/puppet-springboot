@@ -1,12 +1,12 @@
 {
-  "name": "hubertqc-springboot",
+  "name": "lhqg-springboot",
   "version": "1.1.0",
   "author": "Hubert Quarantel-Colombani <hubert@quarantel.name>",
   "summary": "Creates core Linux resources for Springboot application - deploy App",
   "license": "GPL-2.0",
-  "source": "https://github.com/hubertqc/selinux_springboot",
-  "project_page": "https://github.com/hubertqc/selinux_springboot",
-  "issues_url": "https://github.com/hubertqc/selinux_springboot/issues",
+  "source": "https://github.com/lhqg/puppet-springboot",
+  "project_page": "https://github.com/lhqg/puppet-springboot",
+  "issues_url": "https://github.com/lhqg/puppet-springboot/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",

@@ -1,6 +1,6 @@
-How to Submit Patches to the Puppet module `hubertqc-springboot`
+How to Submit Patches to the Puppet module `lhqg-springboot`
 ================================================================
-https://github.com/hubertqc/puppet-springboot
+https://github.com/lhqg/puppet-springboot
 
 This document is intended to act as a guide to help you contribute to the
 `springboot` Puppet module project.
