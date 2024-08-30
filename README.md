@@ -1,10 +1,10 @@
-![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/hubertqc/puppet-springboot)
+![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/lhqg/puppet-springboot)
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
-[![GitHub Issues](https://img.shields.io/github/issues/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/issues)
-[![GitHub PR](https://img.shields.io/github/issues-pr/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/pulls)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/commits/main)
-[![GitHub Last commit](https://img.shields.io/github/last-commit/hubertqc/puppet-springboot)](https://github.com/hubertqc/puppet-springboot/commits/main)
-![GitHub Downloads](https://img.shields.io/github/downloads/hubertqc/puppet-springboot/total)
+[![GitHub Issues](https://img.shields.io/github/issues/lhqg/puppet-springboot)](https://github.com/lhqg/puppet-springboot/issues)
+[![GitHub PR](https://img.shields.io/github/issues-pr/lhqg/puppet-springboot)](https://github.com/lhqg/puppet-springboot/pulls)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/lhqg/puppet-springboot)](https://github.com/lhqg/puppet-springboot/commits/main)
+[![GitHub Last commit](https://img.shields.io/github/last-commit/lhqg/puppet-springboot)](https://github.com/lhqg/puppet-springboot/commits/main)
+![GitHub Downloads](https://img.shields.io/github/downloads/lhqg/puppet-springboot/total)
 
 # Puppet module springboot
 
@@ -31,12 +31,12 @@ filesystems, group/user, ...) in order to prepare the OS to host Springboot appl
 The defined type intents to implement the deployment of a Springboot app instance on top of a
 prepared OS.
 
-This Puppet module is part of the overall HubertQC/*springboot GitHub repositories family:
-   https://github.com/hubertqc/selinux_springboot
+This Puppet module is part of the overall lhqg/*springboot GitHub repositories family:
+   https://github.com/lhqg/selinux_springboot
 
 ## Module Description
 
-The `hubertqc-springboot` Puppet module implements the `springboot` Puppet class
+The `lhqg-springboot` Puppet module implements the `springboot` Puppet class
 to create the base OS structures to host one ore more Springboot applications.
 
 These OS structures are:
@@ -47,7 +47,7 @@ These OS structures are:
 * systemd units
 * packages
 
-The `hubertqc-springboot` Puppet module also implements the `springboot::app`
+The `lhqg-springboot` Puppet module also implements the `springboot::app`
 Puppet defined-type to deploy a specific Springboot application on top of the
 OS structures.
 
@@ -62,7 +62,7 @@ Group `springboot`and  user `springboot` will be created.
 #### Packages
 
 Packages `springboot-selinux`, `springboot-selinux-devel` will be installed, thus installing the
-`springboot` SELinux policy module (see https://github.com/hubertqc/selinux_springboot)
+`springboot` SELinux policy module (see https://github.com/lhqg/selinux_springboot)
 
 The `springboot-systemd` package will also be installed, thus creating the `springboot.target`
 and `springboot@.service` systemd units.
@@ -94,7 +94,7 @@ and filesystems, using the LVM groups supplied:
 This module requires the following Puppet modules to be available:
     - puppetlabs-stdlib, version 1.0.0 or later,
     - puppetlabs-lvm, version 1.1.0 or later,
-    - hubertqc-mountpoint, version 1.0.0 or later,
+    - lhqg-mountpoint, version 1.0.0 or later,
     - voxpopuli-selinux, version 3.0.0 or later,
 
 ### Beginning with springboot
@@ -195,7 +195,7 @@ Works only on Red Hat Linux and Red Hat like distributions.
 
 ## Development
 
-See https://github.com/hubertqc/puppet-springboot/CONTRIBUTING.md
+See https://github.com/lhqg/puppet-springboot/CONTRIBUTING.md
 
 ## Disclaimer
 
