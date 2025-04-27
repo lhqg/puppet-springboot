@@ -33,7 +33,7 @@ define springboot::app::java (
 
   case $java_flavour {
     'oracle'  : {
-      if $java_version < 11 {
+      if Integer($java_version) < 11 {
         $pkg_name = "jre1.${java_version}"
       } else {
         $pkg_name = "jre${java_version}"
@@ -48,7 +48,7 @@ define springboot::app::java (
       }
     }
     'openjdk' : {
-      if $java_version < 11 {
+      if Integer($java_version) < 11 {
         $pkg_name = "java-1.${java_version}.0-openjdk"
         $javahome_link_target = "/etc/alternatives/jre_1.${java_version}.0_openjdk/"
       } else {
